@@ -29,4 +29,6 @@ class Doktor(Personel):
         return f"{super().__str__()}, Uzmanlık: {self.__uzmanlik}, Deneyim Yılı: {self.__deneyim_yili}, Hastane: {self.__hastane}"
 
     def maas_arttir(self,percent):
-        pass
+        new = self.get_maas() * (1 + percent/100)
+        new = round(new,2)
+        self.set_maas(new)
