@@ -48,4 +48,34 @@ class Hasta:
         return f"Hasta No: {self.__hasta_no}, Ad: {self.__ad}, Soyad: {self.__soyad}, Doğum Tarihi: {self.__dogum_tarihi}, Hastalık: {self.__hastalik}, Tedavi: {self.__tedavi}"
 
     def tedavi_suresi_hesapla(self):
-        pass
+        MIN = 3
+        tedavi_suresi = len(self.get_hastalik())
+
+        if tedavi_suresi > 10:
+            tedavi_suresi = MIN
+
+        if self.get_tedavi().lower() == "özel tedavi":
+            tedavi_suresi += 5
+
+        return tedavi_suresi
+
+# a = Hasta(0,"Gojo", "Satoru", "1/1/1", "World Cutter", "özel tedavi")
+# print(a.tedavi_suresi_hesapla())
+
+# # print(a)
+
+# # print(a.get_hasta_no())
+# # print(a.get_ad())
+# # print(a.get_soyad())
+# # print(a.get_dogum_tarihi())
+# # print(a.get_hastalik())
+# # print(a.get_tedavi())
+
+# # a.set_ad("Can")
+# # a.set_soyad("Bilgin")
+# # a.set_dogum_tarihi("11/12/2003")
+# # a.set_hastalik("Autism")
+# # a.set_tedavi("Goth Treatment")
+
+# # print(a)
+

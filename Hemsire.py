@@ -28,5 +28,7 @@ class Hemsire(Personel):
     def __str__(self):
         return f"{super().__str__()}, Çalışma Saati: {self.__calisma_saati}, Sertifika: {self.__sertifika}, Hastane: {self.__hastane}"
 
-    def maas_arttir(self, percent):
-        pass
+    def maas_arttir(self,percent):
+        new = self.get_maas() * (1 + percent/100)
+        new = round(new,2)
+        self.set_maas(new)
