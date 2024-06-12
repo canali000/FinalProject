@@ -88,11 +88,11 @@ print()
 # Var olan DataFrame’den ad, soyad, departman, maas, uzmanlik, deneyim_yili,
 # hastalik, tedavi bilgilerini içeren yeni bir DataFrame elde ediniz ve yazdırınız.
 
-newData = {}
+delete = ["calisma_saati", "sertifika", "hasta_no"]
+newFrame = frame.drop(columns=delete)
 
-for column in frame.columns:
-    newData[column] = frame[column].tolist() 
+# print("Eski DataFrame: ")
+# print(frame)
 
-newFrame = pd.DataFrame(newData)
-
+print("Yeni DataFrame: ")
 print(newFrame)
