@@ -96,3 +96,4 @@ newFrame = frame.drop(columns=delete)
 
 print("Yeni DataFrame: ")
 print(newFrame)
+

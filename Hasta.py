@@ -58,3 +58,4 @@ class Hasta:
             tedavi_suresi += 5
 
         return tedavi_suresi
+
